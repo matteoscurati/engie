@@ -1,0 +1,19 @@
+.first-article
+  background-color: $blue
+  border-bottom: solid 3rem $green
+
+.first-article__body
+  display: table
+  width: 100%
+
+.first-article__body__inner
+  display: table-cell
+  table-layout: fixed
+  vertical-align: bottom
+  +padding-top(28)
+  +padding-bottom(10)
+
+.first-article__heading
+  +heading__title
+  color: $white
+  max-width: 800px
