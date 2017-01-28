@@ -1,8 +1,11 @@
 import $ from 'jQuery';
+import matchHeight from 'jquery-match-height';
 
 require('jquery-ui');
 require('modernizr');
 
 $(document).ready(() => {
-  console.log("Hello world");
+  if ($('.half-article--same-height').length > 0) {
+    $('.half-article--same-height').matchHeight();
+  }
 });

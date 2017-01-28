@@ -1,6 +1,6 @@
 .half-article.space--both-5
   .grid--middle
-    .grid__item.width-12-12.lap-6-12
+    .grid__item.width-12-12.lap-6-12.half-article--same-height
       .half-article__body
         .half-article__heading
           .divider--black.space--bottom-3
@@ -8,4 +8,5 @@
         .half-article__content.space--top-3
           p = lorem.paragraph
     .grid__item.width-12-12.lap-6-12
-      2
+      .half-article__image.half-article--same-height
+        = partial "partials/article-image"
