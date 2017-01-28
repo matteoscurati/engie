@@ -1,0 +1,11 @@
+.two-article
+  .grid--middle
+    - 2.times do
+      .grid__item.width-6-12.lap-3-12.two-article--same-height
+        = partial "partials/article-image", locals: { image: "03" }
+      .grid__item.width-6-12.lap-3-12.two-article--same-height
+        .two-article__body
+          .two-article__heading
+            h2 = lorem.sentence
+          .two-article__content.space--top-3
+            p = lorem.sentence

@@ -1,10 +1,10 @@
 .half-coloured
-  .grid--middle
+  .grid
     .grid__item.width-12-12.lap-6-12.half-coloured--same-height
       .half-coloured__body
         .half-coloured__heading
-          h2 = lorem.words 3
+          h2 = lorem.sentence
         .half-coloured__content.space--top-3
-          p = lorem.paragraph
+          p = lorem.sentence
     .grid__item.width-12-12.lap-6-12.half-coloured--same-height
       = partial "partials/article-image", locals: { image: "01" }

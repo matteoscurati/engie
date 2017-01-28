@@ -9,9 +9,13 @@
   color: $black
 
 .half-article__content
+  +margin-bottom(1)
   +content
   color: $black
   +font-size(delta)
+
+  +at-breakpoint(lap)
+    +margin-bottom(0)
 
 .half-article__image
   +margin-right(5)

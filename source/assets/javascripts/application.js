@@ -12,4 +12,12 @@ $(document).ready(() => {
   if ($('.half-coloured--same-height').length > 0) {
     $('.half-coloured--same-height').matchHeight();
   }
+
+  if ($('.two-article--same-height').length > 0) {
+    $('.two-article--same-height').matchHeight();
+  }
+
+  if ($('.three-article--same-height').length > 0) {
+    $('.three-article--same-height').matchHeight();
+  }
 });

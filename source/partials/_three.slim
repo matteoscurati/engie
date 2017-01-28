@@ -1,0 +1,11 @@
+.three-article
+  .grid
+    - 3.times do
+      .grid__item--no-padding.width-12-12.lap-4-12
+        .three-article__image
+          = partial "partials/article-image", locals: { image: "04" }
+        .three-article__body
+          .three-article__heading
+            h2 = lorem.sentence
+          .three-article__content.space--top-3
+            p = lorem.sentence
