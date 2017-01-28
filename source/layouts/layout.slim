@@ -1,0 +1,8 @@
+doctype html
+html
+  = partial "partials/header"
+  body class= page_classes
+    = partial "partials/sole"
+    = yield
+    = partial "partials/footer"
+    = javascript_include_tag :application
