@@ -6,6 +6,10 @@
   position: relative
   border-bottom: 3rem solid $green
 
+.first-article--no-border
+  @extend .first-article
+  border-bottom: none
+
 .first-article__body
   display: table
   width: 100%
@@ -29,6 +33,9 @@ a.first-article__body__inner
     .first-article__button
       opacity: .8
 
+  &.is-bigger
+    +padding-bottom(8)
+
 .first-article__heading
   +heading__title
   color: $white
@@ -43,3 +50,28 @@ a.first-article__body__inner
 .first-article__button
   +content__button
   transition: opacity 0.3s $material-ease
+
+.first-article__border
+  height: 3rem
+  width: 100%
+  background-color: rgba($black, 0.8)
+  +horizontal-padding(2)
+  +body-font-family
+  line-height: 2.8
+  +font-size(smallprint)
+  text-transform: uppercase
+
+  a
+    color: $white
+    text-decoration: none
+
+    p
+      +vertical-padding(0.5)
+
+      &:before
+        @extend .icon--arrow-left:before
+        +margin-right(1)
+        vertical-align: sub
+
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
