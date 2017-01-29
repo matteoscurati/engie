@@ -1,0 +1,24 @@
+.articolo
+
+.articolo__body
+  +horizontal-padding(2)
+
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
+
+.articolo__data
+  +heading__data
+  +padding-bottom(2.5)
+
+  p
+    font-style: italic
+
+.articolo__content
+  +content
+  +font-size(delta)
+
+  p
+    +margin-top(3)
+
+    &:first-child
+      margin-top: 0
