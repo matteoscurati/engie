@@ -1,0 +1,52 @@
+.logo
+  margin-top: 50px
+  background-color: transparent
+  text-align: left
+  +position(fixed)
+  top: 0
+  left: 0
+  width: 100%
+  border-bottom: none
+  z-index: 5
+  transition: all .5s $material-ease
+  +horizontal-padding(2)
+
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
+
+  &.is-smaller
+    background-color: white
+    border-bottom: 1px solid $blue
+
+  .logo__logo
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    background-image: url("/dist/images/engie.png")
+    height: 44px
+    width: 120px
+    transition: all .5s $material-ease
+    +vertical-margin(1)
+
+    &.is-smaller
+      background-image: url("/dist/images/header-logo-blu.png")
+      height: 34px
+      width: 110px
+
+.logo--news
+  @extend .logo
+
+  img
+    max-width: 90%
+
+  &.is-smaller
+    img
+      max-width: 75%
+
+  +at-breakpoint(lap)
+    img
+      max-width: 100%
+
+    &.is-smaller
+      img
+        max-width: 90%

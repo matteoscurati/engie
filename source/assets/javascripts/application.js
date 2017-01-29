@@ -1,4 +1,5 @@
 import $ from 'jQuery';
+import classie from 'desandro-classie';
 import matchHeight from 'jquery-match-height';
 
 require('jquery-ui');
@@ -29,3 +30,25 @@ $(document).ready(() => {
     $('.three-article__heading--same-height').matchHeight();
   }
 });
+
+function sizeOnScroll() {
+  window.addEventListener('scroll', function(e){
+    var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+      shrinkOn = 10,
+      header = document.querySelector("#logo"),
+      image = document.querySelector("#logo__logo");
+    if (distanceY > shrinkOn) {
+      classie.add(header,"is-smaller");
+      classie.add(image,"is-smaller");
+    } else {
+      if (classie.has(header,"is-smaller")) {
+        classie.remove(header,"is-smaller");
+      }
+      if (classie.has(image,"is-smaller")) {
+        classie.remove(image,"is-smaller");
+      }
+    }
+  });
+}
+
+window.onload = sizeOnScroll();
