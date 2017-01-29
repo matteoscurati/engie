@@ -1,10 +1,14 @@
 .half-coloured
   .grid
     .grid__item.width-12-12.lap-6-12.half-coloured--same-height
-      .half-coloured__body
-        .half-coloured__heading
-          h2 = lorem.sentence
-        .half-coloured__content.space--top-3
-          p = lorem.sentence
+      = link_to "/articolo/prova.html", class: "half-coloured__body" do
+        .half-coloured__body__inner
+          .half-coloured__data
+            p 19 gennaio 2017
+          .half-coloured__heading
+            h2 = lorem.sentence
+          .half-coloured__content.space--top-3
+            p = lorem.sentence
+          .button--rev.half-coloured__button Leggi tutto
     .grid__item.width-12-12.lap-6-12.half-coloured--same-height
       = partial "partials/article-image", locals: { image: "01" }

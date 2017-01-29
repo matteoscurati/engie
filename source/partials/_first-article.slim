@@ -1,6 +1,9 @@
-.first-article
+.first-article style="background: url('/dist/images/02.jpg') no-repeat center center; background-size: cover"
   .first-article__body
-    .first-article__body__inner
+    = link_to "/articolo/prova.html", class: "first-article__body__inner" do
+      .divider--white.space--bottom-5
+      .first-article__data
+        p 19 gennaio 2017
       .first-article__heading
-        .divider--white.space--bottom-5
-        h1 = lorem.words 8
+        h1 Questo è un titolo di prova
+      .button--rev.first-article__button Leggi tutto

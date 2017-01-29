@@ -1,22 +1,58 @@
 .half-article
 
-.half-article__body
+a.half-article__body
   background-color: $white
-  +horizontal-padding(5)
+  text-decoration: none
+  color: inherit
+
+  &:hover
+    .half-article__heading,
+    .half-article__data,
+    .half-article__content,
+    .half-article__button
+    .half-article__image
+      opacity: .8
+
+.half-article__body__inner
+  +horizontal-padding(2)
+
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
 
 .half-article__heading
   +heading__subtitle
   color: $black
+  transition: opacity 0.3s $material-ease
 
 .half-article__content
   +margin-bottom(1)
   +content
   color: $black
   +font-size(delta)
+  transition: opacity 0.3s $material-ease
 
   +at-breakpoint(lap)
     +margin-bottom(0)
 
 .half-article__image
-  +margin-right(5)
-  +margin-left(5)
+  +margin-right(2)
+  +margin-left(2)
+  transition: opacity 0.3s $material-ease
+
+  +at-breakpoint(lap)
+    +margin-right(5)
+    +margin-left(5)
+
+.half-article__data
+  +heading__data
+  color: $black
+  transition: opacity 0.5s $material-ease
+  +font-size(delta)
+
+.half-article__button
+  transition: opacity 0.3s $material-ease
+  +content__button
+  +margin-bottom(2.5)
+
+  +at-breakpoint(lap)
+    +margin-bottom(0)

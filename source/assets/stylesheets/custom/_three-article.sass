@@ -1,6 +1,18 @@
 .three-article
 
-.three-article__body
+a.three-article__body
+  text-decoration: none
+  color: inherit
+
+  &:hover
+    .three-article__heading,
+    .three-article__data,
+    .three-article__content,
+    .three-article__button,
+    .three-article__image
+      opacity: .8
+
+.three-article__body__inner
   +padding(5)
 
 .three-article__image
@@ -14,3 +26,12 @@
 .three-article__content
   +content
   +font-size(delta)
+
+.three-article__date
+  +heading__data
+  transition: opacity 0.5s $material-ease
+  +font-size(delta)
+
+.three-article__button
+  transition: opacity 0.3s $material-ease
+  +content__button

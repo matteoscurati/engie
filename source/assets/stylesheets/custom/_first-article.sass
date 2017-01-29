@@ -1,20 +1,45 @@
 .first-article
-  background-color: $blue
-  border-bottom: solid 3rem $green
+  background-repeat: no-repeat
+  background-position: center center
+  background-color: $light-bg-color
+  background-size: cover
+  position: relative
+  border-bottom: 3rem solid $green
 
 .first-article__body
   display: table
   width: 100%
-  +horizontal-padding(5)
+  +horizontal-padding(1.5)
 
-.first-article__body__inner
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
+
+a.first-article__body__inner
   display: table-cell
   table-layout: fixed
   vertical-align: bottom
-  +padding-top(28)
-  +padding-bottom(10)
+  +padding-top(21)
+  +padding-bottom(5)
+  text-decoration: none
+  color: inherit
+
+  &:hover
+    .first-article__heading,
+    .first-article__data,
+    .first-article__button
+      opacity: .8
 
 .first-article__heading
   +heading__title
   color: $white
   max-width: 800px
+  transition: opacity 0.3s $material-ease
+
+.first-article__data
+  +heading__data
+  color: white
+  transition: opacity 0.5s $material-ease
+
+.first-article__button
+  +content__button
+  transition: opacity 0.3s $material-ease

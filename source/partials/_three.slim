@@ -4,8 +4,13 @@
       .grid__item--no-padding.width-12-12.lap-4-12
         .three-article__image
           = partial "partials/article-image", locals: { image: "04" }
-        .three-article__body
-          .three-article__heading
-            h2 = lorem.sentence
-          .three-article__content.space--top-3
-            p = lorem.sentence
+        = link_to "articolo/prova.html", class: "three-article__body"
+          .three-article__body__inner
+            .three-article__heading--same-height
+              .three-article__date
+                p 19 gennaio 2017
+              .three-article__heading
+                h2 = lorem.sentence
+              .three-article__content.space--top-3
+                p = lorem.sentence
+            .button.three-article__button Leggi tutto

@@ -1,13 +1,41 @@
 .two-article
 
-.two-article__body
-  +padding(3)
+a.two-article__body
+  text-decoration: none
+  color: inherit
+
+  &:hover
+    .two-article__heading,
+    .two-article__data,
+    .two-article__content,
+    .two-article__button,
+    .two-article__image
+      opacity: .8
+
+.two-article__body__inner
+  +vertical-padding(3)
+  +padding-left(0)
+  +padding-right(2)
+
+  +at-breakpoint(lap)
+    +padding(3)
 
 .two-article__heading
+  transition: opacity 0.3s $material-ease
   +heading__subtitle
   font-weight: 700
   +font-size(beta)
 
 .two-article__content
+  transition: opacity 0.3s $material-ease
   +content
   +font-size(delta)
+
+.two-article__data
+  +heading__data
+  transition: opacity 0.5s $material-ease
+  +font-size(delta)
+
+.two-article__button
+  transition: opacity 0.3s $material-ease
+  +content__button

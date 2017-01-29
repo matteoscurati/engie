@@ -20,4 +20,12 @@ $(document).ready(() => {
   if ($('.three-article--same-height').length > 0) {
     $('.three-article--same-height').matchHeight();
   }
+
+  if ($('.two-article__heading--same-height').length > 0) {
+    $('.two-article__heading--same-height').matchHeight();
+  }
+
+  if ($('.three-article__heading--same-height').length > 0) {
+    $('.three-article__heading--same-height').matchHeight();
+  }
 });

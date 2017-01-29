@@ -2,13 +2,41 @@
   background-color: $blue
   color: white
 
-.half-coloured__body
-  +padding(5)
+a.half-coloured__body
+  background-color: $white
+  text-decoration: none
+  color: inherit
+
+  &:hover
+    .half-coloured__heading,
+    .half-coloured__data,
+    .half-coloured__content,
+    .half-coloured__button,
+    .half-coloured__image
+      opacity: .8
+
+.half-coloured__body__inner
+  +padding(2)
+
+  +at-breakpoint(lap)
+    +padding(5)
 
 .half-coloured__heading
   +heading__subtitle
   font-weight: 700
+  transition: opacity 0.5s $material-ease
 
 .half-coloured__content
   +content
   +font-size(delta)
+  transition: opacity 0.5s $material-ease
+
+.half-coloured__data
+  +heading__data
+  color: $white
+  transition: opacity 0.5s $material-ease
+  +font-size(delta)
+
+.half-coloured__button
+  transition: opacity 0.3s $material-ease
+  +content__button
