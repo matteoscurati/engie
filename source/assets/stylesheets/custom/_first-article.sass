@@ -4,33 +4,32 @@
   background-color: $light-bg-color
   background-size: cover
   position: relative
-  border-bottom: 3rem solid $green
+  +padding(12)
+  +margin-bottom(2)
 
 .first-article--no-border
   @extend .first-article
   border-bottom: none
 
 .first-article__body
-  display: table
   width: 100%
-  +horizontal-padding(1.5)
+  +padding-top(1.5)
+  +padding-bottom(3)
+  +horizontal-padding(2)
+  color: $black
 
   +at-breakpoint(lap)
     +horizontal-padding(5)
 
 a.first-article__body__inner, .first-article__body__inner
-  display: table-cell
-  table-layout: fixed
-  vertical-align: bottom
-  +padding-top(21)
-  +padding-bottom(5)
   text-decoration: none
   color: inherit
 
   &:hover
     .first-article__heading,
     .first-article__data,
-    .first-article__button
+    .first-article__button,
+    .first-article__content
       opacity: .8
 
   &.is-bigger
@@ -38,13 +37,11 @@ a.first-article__body__inner, .first-article__body__inner
 
 .first-article__heading
   +heading__title
-  color: $white
   max-width: 800px
   transition: opacity 0.3s $material-ease
 
 .first-article__data
   +heading__data
-  color: white
   transition: opacity 0.5s $material-ease
 
 .first-article__button
@@ -62,7 +59,6 @@ a.first-article__body__inner, .first-article__body__inner
   text-transform: uppercase
 
   a
-    color: $white
     text-decoration: none
 
     p
@@ -75,3 +71,13 @@ a.first-article__body__inner, .first-article__body__inner
 
   +at-breakpoint(lap)
     +horizontal-padding(5)
+
+.first-article__content
+  +margin-bottom(1)
+  +content
+  color: $black
+  +font-size(delta)
+  transition: opacity 0.3s $material-ease
+
+  +at-breakpoint(lap)
+    +margin-bottom(0)
