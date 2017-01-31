@@ -1,9 +1,9 @@
 .two-article
   .grid--middle
     - 2.times do
-      .grid__item.width-6-12.lap-3-12.two-article--same-height
-        = partial "partials/article-image", locals: { image: "03" }
-      .grid__item.width-6-12.lap-3-12.two-article--same-height
+      .grid__item.width-12-12.lap-6-12
+        .two-article__image
+          = partial "partials/article-image", locals: { image: "03" }
         = link_to "/articolo/prova.html", class: "two-article__body"
           .two-article__body__inner
             .two-article__heading--same-height
