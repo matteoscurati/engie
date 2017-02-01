@@ -7,9 +7,12 @@
   +padding(12)
   +margin-bottom(2)
 
-.first-article--no-border
+.first-article--border
   @extend .first-article
   border-bottom: none
+  display: table
+  vertical-align: bottom
+  width: 100%
 
 .first-article__body
   width: 100%
@@ -49,10 +52,10 @@ a.first-article__body__inner, .first-article__body__inner
   transition: opacity 0.3s $material-ease
 
 .first-article__border
+  display: table-cell
   height: 3rem
   width: 100%
   background-color: rgba($black, 0.8)
-  +horizontal-padding(2)
   +body-font-family
   line-height: 2.8
   +font-size(smallprint)
