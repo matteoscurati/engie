@@ -1,7 +1,7 @@
 .three-article
   .grid
     - 3.times do
-      .grid__item--no-padding.width-12-12.lap-4-12
+      .grid__item.width-12-12.lap-4-12.three-article--grid
         .three-article__image
           = partial "partials/article-image", locals: { image: "04" }
         = link_to "articolo/prova.html", class: "three-article__body"

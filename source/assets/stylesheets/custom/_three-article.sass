@@ -1,4 +1,17 @@
 .three-article
+  +horizontal-padding(2)
+
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
+
+.three-article--grid
+  +margin-bottom(5)
+
+  &:last-child
+    +margin-bottom(0)
+
+  +at-breakpoint(lap)
+    +margin-bottom(0)
 
 a.three-article__body
   text-decoration: none
@@ -13,7 +26,6 @@ a.three-article__body
       opacity: .8
 
 .three-article__body__inner
-  +padding(5)
 
 .three-article__image
   height: 15rem
@@ -31,6 +43,7 @@ a.three-article__body
   +heading__data
   transition: opacity 0.5s $material-ease
   +font-size(delta)
+  +margin-top(2)
 
 .three-article__button
   transition: opacity 0.3s $material-ease
