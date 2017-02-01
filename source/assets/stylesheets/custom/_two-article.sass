@@ -1,9 +1,17 @@
 .two-article
   +horizontal-padding(2)
-  +vertical-padding(2)
+  +vertical-padding(5)
 
   +at-breakpoint(lap)
-    +vertical-padding(4)
+    +padding(5)
+
+.two-article--grid
+  &:first-child
+    +margin-bottom(5)
+
+  +at-breakpoint(lap)
+    &:first-child
+      +margin-bottom(0)
 
 a.two-article__body
   text-decoration: none
@@ -21,14 +29,12 @@ a.two-article__body
 
   +at-breakpoint(lap)
     height: 8rem
-    +horizontal-padding(3)
 
 .two-article__body__inner
-  +vertical-padding(2)
 
-  +at-breakpoint(lap)
-    +padding(3)
-    +padding-bottom(0)
+  //+at-breakpoint(lap)
+    //+padding(3)
+    //+padding-bottom(0)
 
 .two-article__heading
   transition: opacity 0.3s $material-ease
@@ -46,9 +52,6 @@ a.two-article__body
   transition: opacity 0.5s $material-ease
   +font-size(delta)
   +margin-top(2)
-
-  +at-breakpoint(lap)
-    +margin-top(0)
 
 .two-article__button
   transition: opacity 0.3s $material-ease
