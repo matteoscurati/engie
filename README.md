@@ -1,4 +1,4 @@
-#Emmabooks
+#Engie
 
 ##Development
 
@@ -24,6 +24,3 @@ bundle exec middleman
 ```
 bundle exec middleman build
 ```
-
-##Deploy
-Just push. Emmabooks is hosted on Netlify: every time you push, site is builded.
