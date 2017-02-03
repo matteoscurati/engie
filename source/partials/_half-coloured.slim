@@ -1,13 +1,12 @@
 .half-coloured
   .grid
     .grid__item.width-12-12.lap-6-12.half-coloured--same-height.wow.fadeIn data-wow-delay="0.5s"
-      .wrap
-        = link_to "/articolo/prova.html", class: "half-coloured__body" do
-          .half-coloured__body__inner
-            .divider--white.space--bottom-2
-            .half-coloured__heading
-              h2 Chi siamo
-            .half-coloured__content.space--top-3
-              p = lorem.sentences 5
+      = link_to "/articolo/prova.html", class: "half-coloured__body" do
+        .half-coloured__body__inner
+          .divider--white.space--bottom-2
+          .half-coloured__heading
+            h2 Chi siamo
+          .half-coloured__content.space--top-3
+            p = lorem.sentences 5
     .grid__item--no-padding.width-12-12.lap-6-12.half-coloured--same-height.wow.fadeIn data-wow-delay="0.75s"
       = partial "partials/article-image", locals: { image: "01" }
