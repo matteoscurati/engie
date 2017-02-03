@@ -1,0 +1,14 @@
+.grid
+  - 6.times do
+    .grid__item.width-12-12.tab-6-12.lap-6-12.desk-4-12
+        .article-box
+          = link_to "/articolo/prova.html", class: "article-box__link" do
+            .article-box__body
+              .article-box__image
+              .article-box__inner
+                .article-box__text
+                  .article-box__title
+                    h2 Titolo di prova
+                  .article-box__text
+                    p = lorem.sentences 5
+                .article-box__button Leggi tutto >
