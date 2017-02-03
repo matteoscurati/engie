@@ -1,0 +1,37 @@
+.activity
+  background-repeat: no-repeat
+  background-position: center center
+  background-color: $light-bg-color
+  background-size: cover
+  position: relative
+
+.activity__body
+  display: table
+  width: 100%
+
+.activity__body__inner
+  display: table-cell
+  vertical-align: middle
+  +vertical-padding(8)
+
+.activity__heading
+  +heading-font-family
+  +font-size(alpha)
+  line-height: 1.2
+  max-width: 800px
+  transition: opacity 0.5s $material-ease
+  color: white
+  text-transform: uppercase
+
+.activity__link
+  text-decoration: none
+  color: white
+
+  &:hover
+    .activity__heading,
+    .activity__button
+      opacity: .7
+
+.activity__button
+  +content__button
+  transition: opacity 0.5s $material-ease
