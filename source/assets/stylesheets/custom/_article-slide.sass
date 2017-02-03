@@ -1,0 +1,24 @@
+.article-slide
+
+.article-slide__box
+  border-bottom: solid 1px $light-bg-color
+  +margin-bottom(2.5)
+
+.article-slide__link
+  text-decoration: none
+
+  &:hover
+    .article-slide__title
+      opacity: .7
+
+.article-slide__data
+  font-style: italic
+
+.article-slide__title
+  color: $blue
+  +body-font-family
+  +font-size(delta)
+  line-height: 1.2
+  +margin-bottom(1)
+  font-weight: bold
+  transition: opacity 0.3s $material-ease

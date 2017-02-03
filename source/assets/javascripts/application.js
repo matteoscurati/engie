@@ -4,10 +4,20 @@ import matchHeight from 'jquery-match-height';
 
 require('jquery-ui');
 require('modernizr');
+require('wow');
+
+$(document).ready(() => {
+  new WOW().init();
+  const wow = new WOW({});
+});
 
 $(document).ready(() => {
   if ($('.article-box').length > 0) {
     $('.article-box').matchHeight();
+  }
+
+  if ($('.half-coloured--same-height').length > 0) {
+    $('.half-coloured--same-height').matchHeight();
   }
 });
 

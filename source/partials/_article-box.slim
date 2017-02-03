@@ -1,12 +1,14 @@
 .grid
   - 6.times do
     .grid__item.width-12-12.tab-6-12.lap-6-12.desk-4-12
-        .article-box
+        .article-box.wow.fadeIn data-wow-delay="0.5s"
           = link_to "/articolo/prova.html", class: "article-box__link" do
             .article-box__body
-              .article-box__image
+              .article-box__image style="background: url('/dist/images/04.jpg') no-repeat center center; background-size: cover"
               .article-box__inner
                 .article-box__text
+                  .article-box__data
+                    p 19 gennaio 2017
                   .article-box__title
                     h2 Titolo di prova
                   .article-box__text
