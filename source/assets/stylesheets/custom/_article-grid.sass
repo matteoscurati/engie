@@ -1,0 +1,27 @@
+.article-grid
+
+.article-grid__body
+  display: block
+  width: 100%
+
+  +at-breakpoint(lap)
+    display: table
+
+.article-grid__main
+  height: 100px
+  background-color: yellow
+  width: 100%
+
+  +at-breakpoint(lap)
+    width: auto
+    display: table-cell
+
+.article-grid__side
+  height: 100px
+  display: block
+  background-color: red
+  width: 100%
+
+  +at-breakpoint(lap)
+    width: 15rem
+    display: table-cell
