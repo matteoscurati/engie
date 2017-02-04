@@ -4,15 +4,32 @@
   background-color: $light-bg-color
   background-size: cover
   position: relative
-  +padding(15)
+  +vertical-padding(15)
   +margin-bottom(4)
 
 .first-article--border
   @extend .first-article
   border-bottom: none
   display: table
-  vertical-align: bottom
   width: 100%
+
+.first-article__back
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  color: white
+  vertical-align: bottom
+  +horizontal-padding(2)
+  +vertical-padding(1)
+  background: rgba($black, 0.7)
+
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
+
+  a
+    color: white
+    text-decoration: none
 
 .first-article__body
   width: 100%
