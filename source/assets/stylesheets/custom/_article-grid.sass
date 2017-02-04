@@ -1,0 +1,32 @@
+.article-grid
+  +horizontal-padding(2)
+
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
+
+.article-grid__body
+  display: block
+  width: 100%
+
+  +at-breakpoint(lap)
+    display: table
+
+.article-grid__main
+  width: 100%
+
+  +at-breakpoint(lap)
+    width: auto
+    display: table-cell
+
+.article-grid__side
+  display: block
+  width: 100%
+
+  +at-breakpoint(lap)
+    width: 15rem
+    display: table-cell
+
+.article-grid__side__body
+
+  +at-breakpoint(lap)
+    +padding-left(1.5)

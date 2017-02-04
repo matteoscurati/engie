@@ -28,7 +28,9 @@
 
 .grid__item--no-padding
   +grid-item
-  padding-left: 0
+
+  +at-breakpoint(lap)
+    padding-left: 0
 
 .grid--rev
   @extend .grid

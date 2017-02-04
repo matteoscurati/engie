@@ -1,0 +1,55 @@
+.activity
+  background-repeat: no-repeat
+  background-position: center center
+  background-color: $light-bg-color
+  background-size: cover
+  position: relative
+
+.activity__title
+  +vertical-margin(5)
+  +horizontal-padding(2)
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
+
+.activity__title__title
+  +heading__subtitle
+  font-weight: 700
+
+.activity__title__content
+  +content
+  +font-size(delta)
+
+.activity__body
+  display: table
+  width: 100%
+  +horizontal-padding(2)
+
+  +at-breakpoint(lap)
+    +horizontal-padding(5)
+
+.activity__body__inner
+  display: table-cell
+  vertical-align: middle
+  +vertical-padding(8)
+
+.activity__heading
+  +heading-font-family
+  +font-size(alpha)
+  line-height: 1.2
+  max-width: 800px
+  transition: opacity 0.5s $material-ease
+  color: white
+  text-transform: uppercase
+
+.activity__link
+  text-decoration: none
+  color: white
+
+  &:hover
+    .activity__heading,
+    .activity__button
+      opacity: .7
+
+.activity__button
+  +content__button
+  transition: opacity 0.5s $material-ease

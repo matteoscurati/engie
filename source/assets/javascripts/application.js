@@ -4,30 +4,20 @@ import matchHeight from 'jquery-match-height';
 
 require('jquery-ui');
 require('modernizr');
+require('wow');
 
 $(document).ready(() => {
-  if ($('.half-article--same-height').length > 0) {
-    $('.half-article--same-height').matchHeight();
+  new WOW().init();
+  const wow = new WOW({});
+});
+
+$(document).ready(() => {
+  if ($('.article-box').length > 0) {
+    $('.article-box').matchHeight();
   }
 
   if ($('.half-coloured--same-height').length > 0) {
     $('.half-coloured--same-height').matchHeight();
-  }
-
-  if ($('.two-article--same-height').length > 0) {
-    $('.two-article--same-height').matchHeight();
-  }
-
-  if ($('.three-article--same-height').length > 0) {
-    $('.three-article--same-height').matchHeight();
-  }
-
-  if ($('.two-article__heading--same-height').length > 0) {
-    $('.two-article__heading--same-height').matchHeight();
-  }
-
-  if ($('.three-article__heading--same-height').length > 0) {
-    $('.three-article__heading--same-height').matchHeight();
   }
 });
 
