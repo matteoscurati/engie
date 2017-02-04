@@ -19,6 +19,12 @@ page '/*.txt', layout: false
 # Localization
 # activate :i18n
 
+all_articles = data.articles
+
+all_articles.article.each do |article|
+  proxy "/articoli/#{article.slug}.html", "/templates/article.html", ignore: true, locals: { article: article }
+end
+
 # Assets
 set :css_dir, 'dist/stylesheets'
 set :js_dir, 'dist/javascripts'
@@ -40,9 +46,32 @@ configure :build do
   activate :relative_assets
 end
 
+TRANSFORMS = [
+  ['à', '&agrave;'],
+  ['è', '&egrave;'],
+  ['ù', '&ugrave;'],
+  ['ò', '&ograve;'],
+  ['ì', '&igrave;'],
+  ['À', '&Agrave;'],
+  ['È', '&Egrave;'],
+  ['Ù', '&Ugrave;'],
+  ['Ò', '&Ograve;'],
+  ['Ì', '&Igrave;'],
+  ['°', '&deg;'],
+  ['«', '&laquo;'],
+  ['»', '&raquo;'],
+  ['É', '&Eacute;'],
+  ['é', '&eacute;']
+]
+
 #helpers
 helpers do
   def markdown(text)
-    Tilt['markdown'].new { text }.render(scope=self)
+    renderer = Redcarpet::Render::HTML.new
+    Redcarpet::Markdown.new(renderer).render(text)
+  end
+
+  def entity(text)
+    TRANSFORMS.each.with_object(text) { |(from, to), t| t = t.gsub!(from, to) }
   end
 end

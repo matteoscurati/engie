@@ -1,0 +1,9 @@
+.first-article--border style="background: url('/dist/images/#{article.cover_image}') no-repeat center center; background-size: cover"
+.wrap
+  .first-article__body
+    .divider--black.space--bottom-2
+    .first-article__data
+      p = article.date
+    .first-article__heading
+      h1 = entity(article.title)
+= partial "partials/articolo/articolo"

@@ -1,16 +1,16 @@
 .grid
-  - 6.times do
-    .grid__item.width-12-12.tab-6-12.lap-6-12.desk-4-12
+  - articles.article.each do |article|
+    .grid__item.width-12-12.tab-6-12.lap-6-12
         .article-box.wow.fadeIn data-wow-delay="0.5s"
-          = link_to "/articolo/prova.html", class: "article-box__link" do
+          = link_to "/articoli/#{article.slug}.html", class: "article-box__link" do
             .article-box__body
-              .article-box__image style="background: url('/dist/images/04.jpg') no-repeat center center; background-size: cover"
+              .article-box__image style="background: url('/dist/images/#{article.cover_image}') no-repeat center center; background-size: cover"
               .article-box__inner
                 .article-box__text
                   .article-box__data
-                    p 19 gennaio 2017
+                    p = article.date
                   .article-box__title
-                    h2 Titolo di prova
+                    h2 = entity(article.title)
                   .article-box__text
-                    p = lorem.sentences 5
+                    p = entity(truncate_words(Sanitize.fragment(article.content), length: 20))
                 .article-box__button Leggi tutto >
