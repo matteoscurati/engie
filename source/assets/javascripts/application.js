@@ -16,6 +16,10 @@ $(document).ready(() => {
     $('.article-box').matchHeight();
   }
 
+  if ($('.activity__body__inner').length > 0) {
+    $('.activity__body__inner').matchHeight();
+  }
+
   if ($('.half-coloured--same-height').length > 0) {
     $('.half-coloured--same-height').matchHeight();
   }
