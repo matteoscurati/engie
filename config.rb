@@ -9,19 +9,14 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
+ignore '/templates/*'
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
+activate :dato,
+  token: 'bb64d16544099b39edad'
 
-# Localization
-# activate :i18n
+all_articles = app.dato_items_repo.articles.select { |a| a.published }
 
-all_articles = data.articles
-
-all_articles.article.each do |article|
+all_articles.each do |article|
   proxy "/articoli/#{article.slug}.html", "/templates/article.html", ignore: true, locals: { article: article }
 end
 
@@ -36,6 +31,8 @@ activate :external_pipeline,
   command: build? ? 'gulp build --production' : './node_modules/gulp/bin/gulp.js',
   source: "dist",
   latency: 1
+
+set :relative_links, true
 
 # Build-specific configuration
 configure :build do
@@ -53,6 +50,7 @@ TRANSFORMS = [
   ['ò', '&ograve;'],
   ['ì', '&igrave;'],
   ['À', '&Agrave;'],
+  ['Ã&nbsp;', '&Agrave;'],
   ['È', '&Egrave;'],
   ['Ù', '&Ugrave;'],
   ['Ò', '&Ograve;'],
@@ -61,7 +59,9 @@ TRANSFORMS = [
   ['«', '&laquo;'],
   ['»', '&raquo;'],
   ['É', '&Eacute;'],
-  ['é', '&eacute;']
+  ['é', '&eacute;'],
+  ['â€™', "'"],
+  ['’', "'"]
 ]
 
 #helpers

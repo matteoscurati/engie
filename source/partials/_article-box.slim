@@ -1,5 +1,5 @@
 .grid
-  - articles.article.each do |article|
+  - articles.each do |article|
     .grid__item.width-12-12.tab-6-12.lap-6-12
         .article-box.wow.fadeIn data-wow-delay="0.5s"
           = link_to "/articoli/#{article.slug}.html", class: "article-box__link" do
@@ -12,5 +12,9 @@
                   .article-box__title
                     h2 = entity(article.title)
                   .article-box__text
-                    p = entity(truncate_words(Sanitize.fragment(article.content), length: 20))
+                    - article.content.each do |slice|
+                      - case slice.item_type.api_key
+                        - when "content"
+                          = entity(truncate_words(Sanitize.fragment(slice.text), length: 30))
+                        - break
                 .article-box__button Leggi tutto >

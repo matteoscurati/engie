@@ -1,5 +1,9 @@
-.wrap
-  .articolo.space--top-3
-    .articolo__body
-      .articolo__content
-        = entity(article.content)
+.articolo.space--top-3
+  .articolo__body
+    .articolo__content
+        - article.content.each do |slice|
+          - case slice.item_type.api_key
+            - when "content"
+              = entity(slice.text)
+            - when "image"
+              = image_tag("/dist/images/#{slice.src}")
