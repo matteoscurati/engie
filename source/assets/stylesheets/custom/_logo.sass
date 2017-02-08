@@ -1,15 +1,16 @@
-.logo
+a.logo
   margin-top: 50px
   background-color: transparent
   text-align: left
   +position(absolute)
-  top: 0
+  top: 15%
   left: 0
   width: 100%
   border-bottom: none
   z-index: 5
   transition: all .5s $material-ease
   +horizontal-padding(2)
+  text-decoration: none
 
   +at-breakpoint(lap)
     +horizontal-padding(5)
@@ -18,7 +19,7 @@
     background-color: white
     border-bottom: 1px solid $blue
 
-  .logo__logo
+  span.logo__logo
     background-repeat: no-repeat
     background-position: center center
     background-size: contain
@@ -32,6 +33,24 @@
       background-image: url("/dist/images/header-logo-blu.png")
       height: 34px
       width: 110px
+
+.logo__text
+  color: $white
+  +heading__title
+
+  span > img
+    height: 30px
+
+.logo__powered
+  +heading__title
+  +font-size(epsilon)
+  color: white
+
+  span.text
+    vertical-align: super
+
+  span > img
+    height: 35px
 
 .logo--news
   @extend .logo
