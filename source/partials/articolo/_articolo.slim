@@ -7,3 +7,5 @@
               = entity(slice.text)
             - when "image"
               = image_tag("/dist/images/#{slice.src}")
+              - if slice.crediti
+                .articolo__caption Pixabay
