@@ -3,6 +3,4 @@
   .article-grid__body
     .article-grid__main
       = partial "partials/article-box", locals: { articles: all_articles }
-    .article-grid__side
-      .article-grid__side__body
-        = partial "partials/article-slide"
+    = partial "partials/article-sidebar"  

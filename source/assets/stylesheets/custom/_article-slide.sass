@@ -1,8 +1,18 @@
 .article-slide
 
 .article-slide__box
-  border-bottom: solid 1px $light-bg-color
   +margin-bottom(2.5)
+  display: inline-block
+  width: 50%
+
+  &:nth-child(odd)
+    padding-right: 5px
+  &:nth-child(even)
+    padding-left: 5px
+
+  +at-breakpoint(lap)
+    display: block
+    width: 100%
 
 .article-slide__link
   text-decoration: none
