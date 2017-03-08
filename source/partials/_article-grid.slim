@@ -1,8 +1,8 @@
-- all_articles = app.dato_items_repo.articles.select { |a| a.published }
+- all_articles = dato.articles.select { |a| a.published }
 .article-grid
   .article-grid__body
     .article-grid__main
       = partial "partials/article-box", locals: { articles: all_articles }
-    /.article-grid__side
-      /.article-grid__side__body
-        /= partial "partials/article-slide"
+    .article-grid__side
+      .article-grid__side__body
+        = partial "partials/article-slide"
