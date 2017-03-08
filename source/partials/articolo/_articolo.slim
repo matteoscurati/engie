@@ -8,4 +8,5 @@
             - when "image"
               = image_tag("/dist/images/#{slice.src}")
               - if slice.crediti
-                .articolo__caption = entity(slice.credit_name)
+                - if slice.credit_name
+                 .articolo__caption = entity(slice.credit_name)
