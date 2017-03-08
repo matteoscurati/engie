@@ -1,8 +1,8 @@
 .article-slide
-  - 6.times do
+  - articles.each do |article|
     .article-slide__box.wow.fadeIn data-wow-delay="1s"
-      = link_to "/articolo/prova.html", class: "article-slide__link" do
+      = link_to "/articoli/#{article.slug}.html", class: "article-slide__link" do
         .article-slide__data
-          p 19 gennaio 2017
+          p = article.date
         .article-slide__title
-          h3 Questo è un titolo di prova
+          h3 = article.title

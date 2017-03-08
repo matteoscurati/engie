@@ -1,6 +1,8 @@
 - all_articles = dato.articles.select { |a| a.published }
+- all_articles_grid = all_articles[0..5]
+- all_articles_side = all_articles[6..-1]
 .article-grid
   .article-grid__body
     .article-grid__main
-      = partial "partials/article-box", locals: { articles: all_articles }
-    = partial "partials/article-sidebar"  
+      = partial "partials/article-box", locals: { articles: all_articles_grid }
+    = partial "partials/article-sidebar", locals: { articles: all_articles_side }
